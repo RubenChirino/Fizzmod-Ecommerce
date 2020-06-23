@@ -1,0 +1,1 @@
+export const CATEGORIES_API = 'http://remote.fizzmod.com/menu.json';

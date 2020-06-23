@@ -1,12 +1,12 @@
 :root{ 
-    --gray: #F5F5F5;
+    --gray-light: #F5F5F5;
+    --gray: #D1D3D4;
     --green: #1DB779;
     --black: #1E1E1E;
+    --white: #FFFFFF;
 }
   
 .margin-header{
-    /*margin-right: -15px; 
-    margin-left: -15px; */
     margin-right: 0;
     margin-left: 0;
 }
@@ -14,7 +14,7 @@
 /* Logo */
 
 .logo-styles{
-    background-color: var(--gray);
+    background-color: var(--gray-light);
 }
 
 /* TopNav */
@@ -42,7 +42,7 @@
     height: 56px;
 
     border: none;
-    border-top: solid 1px gray;
+    border-top: solid 1px var(--gray);
     border-radius: inherit;
     color: var(--black);
 }
@@ -52,11 +52,7 @@
     padding: 17px 10px 17px 10px;
     pointer-events: none;
     font-size: 22px;
-  }
-  
-/*.form-control {
-    padding-left: 30px !important;
-}*/
+}
 
 /* Button (Mi Carrito) */
 
@@ -67,12 +63,30 @@
 
 .button-styles h5{
     padding: 14px;
-    color: white;
+    color: var(--white);
     text-transform: uppercase;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .icon-size{
     font-size: 22px;
+}
+
+/* Categories */
+
+.categories-section{
+    background-color: var(--green);
+}
+
+.categories-styles{
+    padding: 16px;
+}
+
+.text-categories-styles{
+    color: var(--white) !important;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: bold;
 }
