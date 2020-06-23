@@ -1,5 +1,5 @@
 import React from "react";
-import LogoImg from '../../../images/logo_fizzmod.svg';  
+import LogoImg from '../../../images/logo/logo_fizzmod.svg';  
 
 export default function Logo(){
 

@@ -1,4 +1,4 @@
-import { CATEGORIES_API } from "./settings";
+import { CATEGORIES_API } from "./settings"; 
 
 export default function getCategories(){  
     
