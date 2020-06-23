@@ -5,8 +5,10 @@
     --black: #1E1E1E;
     --white: #FFFFFF;
 }
+
+/* --- Header --- */
   
-.margin-header{
+.margin-properties-header{
     margin-right: 0;
     margin-left: 0;
 }
@@ -90,3 +92,23 @@
     font-size: 15px;
     font-weight: bold;
 }
+
+/* --- Body --- */
+
+.margin-properties-body{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 2rem;
+}
+
+.body-line-styles{
+    margin-top: 1.5rem;
+    background-color: #9B9B9B;
+}
+
+.body-title-styles{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+  

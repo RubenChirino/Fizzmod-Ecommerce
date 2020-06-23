@@ -1,12 +1,12 @@
 import { BODY_API } from "./settings";
 
-export default function getSliders(){  
-    
+export default function GetProducts(){
+
     return fetch(BODY_API).then(res => res.json()).then(response => {
 
-        const result = response.slides;
+        const result = response.products;
 
         return result;
     })
-  
+
 }

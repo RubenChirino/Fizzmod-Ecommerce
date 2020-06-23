@@ -10,13 +10,13 @@ export default function Header(){
     
     <Fragment>    
        
-        <div className="row margin-header">
+        <div className="row margin-properties-header">
             <Logo />
             <GridSection />
         </div>
 
         <div className="categories-section">
-            <div className="row margin-header"> 
+            <div className="row margin-properties-header"> 
             <Categories /> 
             </div>
         </div>
