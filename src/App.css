@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+:root{ 
+    --gray: #F5F5F5;
+    --green: #1DB779;
+    --black: #1E1E1E;
+}
+  
+.margin-header{
+    /*margin-right: -15px; 
+    margin-left: -15px; */
+    margin-right: 0;
+    margin-left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Logo */
+
+.logo-styles{
+    background-color: var(--gray);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* TopNav */
+
+.margin-topnav{
+    text-align: right;
+}
+
+.options-styles{
+    padding: 0 16px 0 16px;
+    color: var(--green) !important;
+}
+
+/* Search */
+
+.search-styles{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.search-styles input{
+    font-size: 20px;
+    padding-left: 40px !important;
+
+    height: 56px;
+
+    border: none;
+    border-top: solid 1px gray;
+    border-radius: inherit;
+    color: var(--black);
+}
+
+.form-control-feedback {
+    position: absolute;
+    padding: 17px 10px 17px 10px;
+    pointer-events: none;
+    font-size: 22px;
   }
+  
+/*.form-control {
+    padding-left: 30px !important;
+}*/
+
+/* Button (Mi Carrito) */
+
+.button-styles{
+    height: 56px;
+    background-color: var(--black);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-styles h5{
+    padding: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-size{
+    font-size: 22px;
 }
