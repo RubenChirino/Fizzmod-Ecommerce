@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Categories(){
 
-    const { loadingCategories, categories } = useCategories();
+    const { categories } = useCategories(); 
 
     return(
             

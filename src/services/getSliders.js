@@ -1,4 +1,4 @@
-import { BODY_API } from "./settings";
+import { BODY_API } from "./settings"; 
 
 export default function getSliders(){  
     

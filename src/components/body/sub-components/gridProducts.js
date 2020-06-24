@@ -1,55 +1,84 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import useProducts from "../../../hooks/useProducts";
 import { Link } from "react-router-dom";
 import BodyTitle from "./bodyTitle";
 
 export default function GridProducts(){
 
-    const { products } = useProducts();
+    //API
+    const { information } = useProducts();
+    const { products, filters } = information;
 
-    console.log(products);
+    //Local States
+    const [productos, setProductos] = useState([]);
+    const [filtros, setFiltros] = useState([]);
+
+    useEffect(function(){
+        if(products !== undefined && filters !== undefined){
+            setProductos(products);
+            setFiltros(filters);
+        }
+    },[products, filters])
+
+    /*const { values } = filters;
+
+    console.log("Vamos!", values);*/
 
     return(
         <Fragment>
 
         <BodyTitle />
 
-        <div className="row margin-properties-body">
-    
+        <div className="row margin-properties-body mt-4">
     
             <div className="col-2 margin-filter">
-                <h4 className="title-filter-styles">Titulo filtros nro. 1</h4>
-                <hr className=""></hr> 
-                
-                 
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </li>
-                </ul>
+
+                {
+                   filtros.map(({ title, field, values }, index) => 
+                    
+                   <Fragment key={index}>
+
+                    <h4 className="title-filter-styles mt-4">{title}</h4>
+                    <hr></hr> 
+
+                    <ul className="list-group">
+                        {
+                            values.map((array, index) =>
+
+                                <li key={index} className="list-group-item mt-1 mb-1">
+                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                    <label className="form-check-label" htmlFor="exampleCheck1">{array}</label>
+                                </li>
+
+                            )
+                        }
+                    </ul>
+
+                   </Fragment>
+
+                   )
+                }                      
       
             </div>
-
 
 
             <div className="col-10">
                 <div className="row"> 
 
                 {
-                products.map((array, index) => 
+                productos.map((array) => 
                     
-                <div key={index} className="col-3 my-3 card products-card-styles">
+                <div key={array.id} className="col-3 my-3 card products-card-styles">
 
-                <Link to={array.href}>
-                    <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
-                    alt={array.title} />
-                    <div className="card-body text-center">
-                        <h5 className="card-title title-card-styles text-center">{array.title}</h5>
-                        <p className="card-price-before">{`$ ${array.price.listPrice}`}</p>
-                        <p className="card-price-now">{`$ ${array.price.sellingPrice}`}</p>
-                    </div>
-                </Link>    
+                    <Link to={array.href}>
+                        <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
+                        alt={array.title} />
+                        <div className="card-body text-center">
+                            <h5 className="card-title title-card-styles text-center">{array.title}</h5>
+                            <p className="card-price-before">{`$ ${array.price.listPrice}`}</p>
+                            <p className="card-price-now">{`$ ${array.price.sellingPrice}`}</p>
+                        </div>
+                    </Link>    
 
                 </div>)
                 }
@@ -69,36 +98,59 @@ export default function GridProducts(){
 
 /*
 
-    <div className="col-3">
-        <div key={index} className="card">
-            <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
-                alt={array.title} />
-            <div className="card-body">
-                <h5 className="card-title text-center">{array.title}</h5>
-                <p className="card-text">{array.price.listPrice}</p>
-                <p className="card-text">{array.price.sellingPrice}</p>
-            </div>
-        </div>
-    </div> 
+
+{
+                        values.map((array, index) =>
+                        
+                        //console.log(array)
+
+                        <ul key={index} className="list-group">
+                            <li className="list-group-item">
+                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                <label className="form-check-label" htmlFor="exampleCheck1">{array}</label>
+                            </li>
+                        </ul>
+
+                        )
+                    }
 
 
 
-    <ul class="list-group">
-                    <li class="list-group-item">
-                        Dapibus
+
+    <div className=""> 
+                <h4 className="title-filter-styles">Titulo filtros nro. 1</h4>
+                <hr></hr> 
+                            
+                <ul className="list-group">
+                    <li className="list-group-item">
+                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                        <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                     </li>
                 </ul>
+            </div> 
 
 
 
-    <div key={index} className="col-3 my-3 card products-card-styles">
+    
+ {
+                products.map((array, index) => 
+                    
+                <div key={index} className="col-3 my-3 card products-card-styles">
+
+                <Link to={array.href}>
                     <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
                     alt={array.title} />
-                    <div className="card-body">
+                    <div className="card-body text-center">
                         <h5 className="card-title title-card-styles text-center">{array.title}</h5>
-                        <p className="card-text">{array.price.listPrice}</p>
-                        <p className="card-text">{array.price.sellingPrice}</p>
+                        <p className="card-price-before">{`$ ${array.price.listPrice}`}</p>
+                        <p className="card-price-now">{`$ ${array.price.sellingPrice}`}</p>
                     </div>
-                </div>
+                </Link>    
+
+                </div>)
+                }
+
+
+
 
 */
