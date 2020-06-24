@@ -5,7 +5,7 @@ export default function useProducts(){
 
     const [loadingProducts, setLoadingProducts] = useState(false);
 
-    const [products, setProducts] = useState();
+    const [products, setProducts] = useState([]);
 
     useEffect(function(){
         setLoadingProducts(true);
@@ -18,5 +18,4 @@ export default function useProducts(){
     },[]);
 
     return { loadingProducts, products }
-
 }

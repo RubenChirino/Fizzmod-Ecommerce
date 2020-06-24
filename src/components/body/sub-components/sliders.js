@@ -2,8 +2,6 @@ import React, { Fragment } from "react";
 import useSliders from "../../../hooks/useSliders";
 import { Link } from "react-router-dom";
 
-//require(`../../../images/sliders-img/Banner_1.png`);
-
 export default function Sliders(){
 
     const { sliders } = useSliders();

@@ -1,35 +1,63 @@
 import React, { Fragment } from "react";
 import useProducts from "../../../hooks/useProducts";
+import { Link } from "react-router-dom";
+import BodyTitle from "./bodyTitle";
 
 export default function GridProducts(){
 
-    const { loadingProducts ,products } = useProducts();
+    const { products } = useProducts();
 
     console.log(products);
 
     return(
         <Fragment>
 
-        <div className="row margin-properties-body">
-           <hr className="col body-line-styles"></hr> 
-           <h2 className="col-2 text-center body-title-styles">Products</h2> 
-           <hr className="col body-line-styles"></hr>    
-        </div>
+        <BodyTitle />
 
         <div className="row margin-properties-body">
     
-            <div className="col-2">
-                <h4>Titulo filtros nro. 1</h4>
+    
+            <div className="col-2 margin-filter">
+                <h4 className="title-filter-styles">Titulo filtros nro. 1</h4>
                 <hr className=""></hr> 
+                
+                 
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </li>
+                </ul>
+      
             </div>
+
+
 
             <div className="col-10">
-                
-            
-               
-            
+                <div className="row"> 
 
+                {
+                products.map((array, index) => 
+                    
+                <div key={index} className="col-3 my-3 card products-card-styles">
+
+                <Link to={array.href}>
+                    <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
+                    alt={array.title} />
+                    <div className="card-body text-center">
+                        <h5 className="card-title title-card-styles text-center">{array.title}</h5>
+                        <p className="card-price-before">{`$ ${array.price.listPrice}`}</p>
+                        <p className="card-price-now">{`$ ${array.price.sellingPrice}`}</p>
+                    </div>
+                </Link>    
+
+                </div>)
+                }
+
+                </div> 
             </div>
+
+
 
         </div>
 
@@ -41,40 +69,36 @@ export default function GridProducts(){
 
 /*
 
-<div class="card col-3">
-                    <img class="card-img-top" src="..." alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Card title</h5>
-                        <p class="card-text">Some quick example</p>
-                        <p class="card-text">Some quick example</p>
+    <div className="col-3">
+        <div key={index} className="card">
+            <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
+                alt={array.title} />
+            <div className="card-body">
+                <h5 className="card-title text-center">{array.title}</h5>
+                <p className="card-text">{array.price.listPrice}</p>
+                <p className="card-text">{array.price.sellingPrice}</p>
+            </div>
+        </div>
+    </div> 
+
+
+
+    <ul class="list-group">
+                    <li class="list-group-item">
+                        Dapibus
+                    </li>
+                </ul>
+
+
+
+    <div key={index} className="col-3 my-3 card products-card-styles">
+                    <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
+                    alt={array.title} />
+                    <div className="card-body">
+                        <h5 className="card-title title-card-styles text-center">{array.title}</h5>
+                        <p className="card-text">{array.price.listPrice}</p>
+                        <p className="card-text">{array.price.sellingPrice}</p>
                     </div>
                 </div>
-
-
-                {
-                products.map((array, index) => 
-                    
-                <div key={index} class="card col-3">
-                    <img class="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
-                    alt={array.title} />
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{array.title}</h5>
-                        <p class="card-text">{array.price.listPrice}</p>
-                        <p class="card-text">{array.price.sellingPrice}</p>
-                    </div>
-                </div>)
-                }
-
-
-                 { loadingProducts ? <h1>hola</h1> :       
-                    
-                    products.map((array, index) => 
-                    
-                    <div key={index} class="card col-3">
-                        <img class="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
-                        alt={array.title} />
-                    </div>)
-                }
-
 
 */

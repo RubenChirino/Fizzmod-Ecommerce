@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import getSliders from "../services/getSliders";
 
-
 export default function useSliders(){ 
  
     const [loadingSliders, setLoadingSliders] = useState(false);
@@ -18,7 +17,6 @@ export default function useSliders(){
         })
 
     }, []);
-
 
     return { loadingSliders,  sliders}  
 }
