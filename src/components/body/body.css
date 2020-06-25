@@ -1,0 +1,143 @@
+/* --- 
+
+Body 
+
+--- */
+
+.margin-properties-body{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* Title */
+
+.body-line-styles{
+    margin-top: 1.5rem;
+    background-color: #9B9B9B;
+}
+
+.grid-title-styles{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.body-title-styles{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Filters */
+
+.title-filter-styles{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.list-group-item{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.margin-filter{
+    padding: 0;
+}
+
+.list-text-filter{
+    font-size: 15px;
+}
+
+.list-group-item:hover label{
+    color: var(--green-lime); 
+}
+
+/* - */
+
+input[type=checkbox] {
+	display:none; 
+}
+input[type=checkbox] + label {
+	cursor: pointer;
+}
+
+label:before {
+	content: "";
+	background: transparent;
+	border: 1px solid #9B9B9B;
+	/*border-radius: 25px; */
+	display: inline-block;
+	height: 16px;
+	margin-right: 20px;
+	text-align: center;
+	vertical-align:middle;
+	width: 16px;
+}
+input[type=checkbox]:checked + label:before {
+	content: '✓';
+	font-size: 10px;
+    color: var(--white);
+    background-color: var(--green-lime);
+    border: 1px solid var(--green-lime);
+    font-weight: bold;
+}
+
+/* Products */
+
+.products-card-styles{
+    border: none;
+}
+
+.card-header{
+    border: 0;
+    background: transparent;
+}
+
+.not-header-margin{
+    margin-top: 2.8rem;
+}
+
+.discount-style{
+    background-color: var(--blue-turquoise);
+    color: var(--white); 
+
+    /* - */
+    width: 46px;
+    height: 46px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circle-text{
+    padding-top: 11px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.title-card-styles{
+    font-size: 16px;
+    color: var(--black);
+}
+
+.card-price-before{
+    font-size: 13px;
+    color: #9B9B9B;
+    text-decoration: line-through;
+
+    margin-bottom: 0.3rem;
+}
+
+.card-price-now{
+    font-size: 18px;
+    color: var(--green-lime);
+    font-weight: bold;
+}
+  
+.col-3.card.products-card-styles:hover img{
+    opacity: 0.6;
+}
+
+.col-3.card.products-card-styles:hover div h5{
+    color: var(--green-lime); 
+}

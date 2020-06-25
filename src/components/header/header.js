@@ -1,4 +1,5 @@
 import React, { Fragment }  from "react";
+import "./header.css";
 import Logo from "./sub-components/logo";
 import GridSection from "./sub-components/gridSection";
 import Categories from "./sub-components/categories";

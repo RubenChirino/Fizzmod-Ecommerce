@@ -39,14 +39,21 @@ export default function GridProducts(){
 
                     <ul className="list-group">
                         {
-                            values.map((array, index) =>
+                            values.map((array, index) => {
+ 
+                                var cleaningData = array.replace(" ", "");
+                                cleaningData = cleaningData.replace("á","a");
+                                cleaningData = cleaningData.replace("é","e");
+                                var inputId = cleaningData;
 
-                            <li key={index} className="list-group-item mt-1 mb-1">
-                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                <label className="form-check-label list-text-filter" htmlFor="exampleCheck1">{array}</label>
-                            </li>
+                                return(
+                                <li key={index} className="list-group-item mt-1 mb-1">
+                                    <input type="checkbox" className="form-check-input" id={inputId} />
+                                    <label className="form-check-label list-text-filter" htmlFor={inputId}>{array}</label>
+                                </li>
+                                )                               
 
-                            )
+                            })
                         }
                     </ul>
 
@@ -123,3 +130,9 @@ export default function GridProducts(){
 }
 
 
+/*
+
+
+
+
+*/

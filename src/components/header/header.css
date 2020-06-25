@@ -1,0 +1,95 @@
+/* --- 
+
+Header 
+
+--- */
+  
+.margin-properties-header{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.header-nav-bottom{
+    background-color: var(--white);
+}
+
+/* Logo */
+
+.logo-styles{
+    background-color: var(--gray-light);
+}
+
+/* TopNav */
+
+.margin-topnav{
+    text-align: right;
+}
+
+.options-styles{
+    padding: 0 16px 0 16px;
+    color: var(--green-lime) !important;
+    font-size: 13px;
+}
+
+/* Search */
+
+.search-styles{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.search-styles input{
+    font-size: 20px;
+    padding-left: 40px !important;
+
+    height: 56px;
+
+    border: none;
+    border-top: solid 1px var(--gray);
+    border-radius: inherit;
+    color: var(--black);
+}
+
+.form-control-feedback {
+    position: absolute;
+    padding: 17px 10px 17px 10px;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+/* Button (Mi Carrito) */
+
+.button-styles{
+    height: 56px;
+    background-color: var(--black);
+}
+
+.button-styles h5{
+    padding: 14px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.icon-size{
+    font-size: 22px;
+}
+
+/* Categories */
+
+.categories-section{
+    background-color: var(--green-lime);
+}
+
+.categories-styles{
+    padding: 16px;
+}
+
+.text-categories-styles{
+    color: var(--white) !important;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: bold;
+}

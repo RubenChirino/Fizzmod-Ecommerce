@@ -1,3 +1,14 @@
+/* Color Palette */ 
+
+:root{ 
+  --gray-light: #F5F5F5;
+  --gray: #D1D3D4;
+  --green-lime: #1DB779;
+  --black: #1E1E1E;
+  --white: #FFFFFF;
+  --blue-turquoise: #00C4C1;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans";
