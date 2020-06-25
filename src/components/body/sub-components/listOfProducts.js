@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Product from "./product";
 
 export default function ListOfProducts({ products }){
 
@@ -33,23 +33,9 @@ export default function ListOfProducts({ products }){
                     </div>;
 
           return(
-            <div key={array.id} className="col-3 card products-card-styles"> 
-
-                <Link to={array.href}>
-                    <div className="card-header">  
-                        {rebaje}
-                    </div>
-
-                    <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${array.image}`}
-                    alt={array.title} />
-                    <div className="card-body text-center">
-                        <h5 className="card-title title-card-styles text-center">{array.title}</h5>
-                        <p className={`card-price-before ${notShow}`}>{`$ ${array.price.listPrice}`}</p>
-                        <p className="card-price-now">{`$ ${array.price.sellingPrice}`}</p>
-                    </div>
-                </Link>    
-
-            </div>
+            <Product key={array.id} rebaje={rebaje} href={array.href} 
+            image={array.image} title={array.title} pricebefore={array.price.listPrice} 
+            pricenow={array.price.sellingPrice} notshow={notShow} />
           );
             
 
@@ -61,3 +47,4 @@ export default function ListOfProducts({ products }){
     );
 
 }
+
