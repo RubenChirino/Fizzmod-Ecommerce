@@ -1,9 +1,10 @@
 :root{ 
     --gray-light: #F5F5F5;
     --gray: #D1D3D4;
-    --green: #1DB779;
+    --green-lime: #1DB779;
     --black: #1E1E1E;
     --white: #FFFFFF;
+    --blue-turquoise: #00C4C1;
 }
 
 /* --- Header --- */
@@ -27,7 +28,8 @@
 
 .options-styles{
     padding: 0 16px 0 16px;
-    color: var(--green) !important;
+    color: var(--green-lime) !important;
+    font-size: 13px;
 }
 
 /* Search */
@@ -79,7 +81,7 @@
 /* Categories */
 
 .categories-section{
-    background-color: var(--green);
+    background-color: var(--green-lime);
 }
 
 .categories-styles{
@@ -105,6 +107,11 @@
 .body-line-styles{
     margin-top: 1.5rem;
     background-color: #9B9B9B;
+}
+
+.grid-title-styles{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .body-title-styles{
@@ -133,14 +140,46 @@
     padding-left: 20px;
 }
 
+.list-text-filter{
+    font-size: 15px;
+}
+
 .list-group-item:hover label{
-    color: var(--green); 
+    color: var(--green-lime); 
 }
 
 /* Products */
 
 .products-card-styles{
     border: none;
+}
+
+.card-header{
+    border: 0;
+    background: transparent;
+}
+
+.not-header-margin{
+    margin-top: 2.8rem;
+}
+
+.discount-style{
+    background-color: var(--blue-turquoise);
+    color: var(--white); 
+
+    /* - */
+    width: 46px;
+    height: 46px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circle-text{
+    padding-top: 11px;
+
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .title-card-styles{
@@ -152,20 +191,22 @@
     font-size: 13px;
     color: #9B9B9B;
     text-decoration: line-through;
+
+    margin-bottom: 0.3rem;
 }
 
 .card-price-now{
     font-size: 18px;
-    color: var(--green);
+    color: var(--green-lime);
     font-weight: bold;
 }
   
-.col-3.my-3.card.products-card-styles:hover img{
+.col-3.card.products-card-styles:hover img{
     opacity: 0.6;
 }
 
-.col-3.my-3.card.products-card-styles:hover div h5{
-    color: var(--green); 
+.col-3.card.products-card-styles:hover div h5{
+    color: var(--green-lime); 
 }
 
 /* --- Footer -- */
@@ -173,6 +214,7 @@
 .grid-footer-styles{
     background-color: var(--black);
     padding: 3.5rem;
+    margin-top: 4rem;
 }
 
 .margin-properties-footer{
