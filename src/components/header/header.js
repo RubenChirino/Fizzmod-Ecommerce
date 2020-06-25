@@ -9,7 +9,7 @@ export default function Header(){
     
     <Fragment>    
        
-        <div className="row margin-properties-header">
+        <div className="row sticky-top header-nav-bottom margin-properties-header">
             <Logo />
             <GridSection />
         </div>

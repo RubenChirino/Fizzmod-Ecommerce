@@ -20,10 +20,6 @@ export default function GridProducts(){
         }
     },[products, filters])
 
-    /*const { values } = filters;
-
-    console.log("Vamos!", values);*/
-
     return(
         <Fragment>
 

@@ -14,6 +14,10 @@
     margin-left: 0;
 }
 
+.header-nav-bottom{
+    background-color: var(--white);
+}
+
 /* Logo */
 
 .logo-styles{
