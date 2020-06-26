@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./product";
 
-export default function ListOfProducts({ products }){
+export default function ListOfProducts({ products }){ 
 
     return(
     <div className="col-12 col-sm-9 col-md-10 col-lg-10"> 
