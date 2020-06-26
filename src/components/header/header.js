@@ -4,7 +4,7 @@ import Logo from "./sub-components/logo";
 import GridSection from "./sub-components/gridSection";
 import Categories from "./sub-components/categories";
 
-export default function Header(){
+export default function Header(){ 
 
     return(
     

@@ -15,8 +15,8 @@ export default function Sliders(){
 
             return <div key={index} className={`carousel-item ${active}`}>
                 <Link to={array.href}>
-                    <img className="d-block w-100" src={process.env.PUBLIC_URL + `/images/sliders/${array.imgName}`} 
-                    alt={array.href} height="350px" />
+                    <img className="d-block w-100 img-slider-styles" src={process.env.PUBLIC_URL + `/images/sliders/${array.imgName}`} 
+                    alt={array.href}  /> 
                 </Link>        
             </div>
 

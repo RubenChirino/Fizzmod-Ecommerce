@@ -9,6 +9,12 @@ Body
     margin-left: 20px;
 }
 
+/* Slider */
+
+.img-slider-styles{
+    height: 400px;
+}
+
 /* Title */
 
 .body-line-styles{
@@ -18,11 +24,10 @@ Body
 
 .grid-title-styles{
     margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .body-title-styles{
-    font-size: 36px;
+    font-size: 31px;
     font-weight: bold;
 }
 
@@ -51,8 +56,6 @@ Body
     color: var(--green-lime); 
 }
 
-/* - */
-
 input[type=checkbox] {
 	display:none; 
 }
@@ -64,7 +67,6 @@ label:before {
 	content: "";
 	background: transparent;
 	border: 1px solid #9B9B9B;
-	/*border-radius: 25px; */
 	display: inline-block;
 	height: 16px;
 	margin-right: 20px;
@@ -99,8 +101,6 @@ input[type=checkbox]:checked + label:before {
 .discount-style{
     background-color: var(--blue-turquoise);
     color: var(--white); 
-
-    /* - */
     width: 46px;
     height: 46px;
     -moz-border-radius: 50%;
@@ -110,7 +110,6 @@ input[type=checkbox]:checked + label:before {
 
 .circle-text{
     padding-top: 11px;
-
     font-size: 15px;
     font-weight: bold;
 }
@@ -124,7 +123,6 @@ input[type=checkbox]:checked + label:before {
     font-size: 13px;
     color: #9B9B9B;
     text-decoration: line-through;
-
     margin-bottom: 0.3rem;
 }
 
@@ -133,11 +131,54 @@ input[type=checkbox]:checked + label:before {
     color: var(--green-lime);
     font-weight: bold;
 }
-  
-.col-3.card.products-card-styles:hover img{
+
+.col-6.col-lg-3.card.products-card-styles:hover img{
     opacity: 0.6;
 }
 
-.col-3.card.products-card-styles:hover div h5{
+.col-6.col-lg-3.card.products-card-styles:hover div h5{
     color: var(--green-lime); 
 }
+
+/* Movil */
+
+@media screen and (max-width: 955px) {
+ 
+    .img-slider-styles{
+       height: 250px;
+    }
+
+}
+
+@media screen and (max-width: 466px) {
+ 
+    .img-slider-styles{
+        height: 180px;
+    }
+
+    .body-title-styles{
+        font-size: 25px;
+        margin-top: 6px; 
+    }
+
+    .margin-filter {
+        margin-bottom: 1rem;
+    }
+
+}
+
+/* Extra Small */
+
+@media screen and (max-width: 372px) {
+ 
+    .img-slider-styles{
+        height: 150px;
+    }
+
+    .body-title-styles{
+        font-size: 19px;
+        margin-top: 11px; 
+    }
+
+}
+

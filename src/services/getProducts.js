@@ -4,7 +4,7 @@ export default function getProducts(){
 
     return fetch(BODY_API).then(res => res.json()).then(response => {
 
-        const result = response;  //.products
+        const result = response;  
 
         return result;
     })

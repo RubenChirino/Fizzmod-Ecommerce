@@ -9,7 +9,6 @@ function App() {
      <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-         { /*<Route component={NotFound} />*/}
         </Switch>
     </BrowserRouter>
   );

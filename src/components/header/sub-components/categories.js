@@ -11,7 +11,7 @@ export default function Categories(){
         <Fragment>        
             {
             categories.map((array, index) => 
-                <div className="col text-center categories-styles" key={index}>
+                <div className="col-sm-6 col-md col-lg text-center categories-styles" key={index}> 
                 <Link className="text-categories-styles" 
                 to={array.href}>{array.title}</Link>
                 </div>)

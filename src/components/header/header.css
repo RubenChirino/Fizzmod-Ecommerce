@@ -4,7 +4,7 @@ Header
 
 --- */
   
-.margin-properties-header{
+.margin-properties-header{ 
     margin-right: 0;
     margin-left: 0;
 }
@@ -92,4 +92,55 @@ Header
     font-family: "Open Sans";
     font-size: 15px;
     font-weight: bold;
+}
+
+/* Movil */
+
+@media screen and (max-width: 980px) {
+ 
+    .logo-styles{
+       display: none;
+    }
+    
+}
+
+@media screen and (max-width: 443px) {
+ 
+    .options-styles{
+       font-size: 11px;
+    }
+
+    .button-styles h5{
+       padding: 10px 0 10px 0;
+       font-size: 11px;
+       margin-top: 10px;
+    }
+
+    .icon-size{
+        font-size: 16px;
+    }
+
+    .search-styles input{
+        font-size: 15px;
+    }
+
+    .categories-styles{
+        padding: 11px;
+    }
+
+    .text-categories-styles{
+        font-size: 13px;
+    }
+
+}
+
+/* Extra Small */
+
+@media screen and (max-width: 328px){
+
+    .search-styles input{
+        font-size: 14px;
+        padding-left: 36px !important;
+    }
+
 }

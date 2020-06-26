@@ -4,10 +4,10 @@ import Product from "./product";
 export default function ListOfProducts({ products }){
 
     return(
-    <div className="col-10">
+    <div className="col-12 col-sm-9 col-md-10 col-lg-10"> 
         <div className="row"> 
 
-        {
+        { 
         products.map((array) => {
 
             var notShow = "";

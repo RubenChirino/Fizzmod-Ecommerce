@@ -4,12 +4,12 @@ export default function ListOfFilters({ filters }){
 
     return(
 
-        <div className="col-2 margin-filter">
+        <div className="col-12 col-sm-3 col-md-2 col-lg-2 margin-filter"> 
 
         {
            filters.map(({ title, field, values }, index) => 
             
-           <Fragment key={index}>
+           <Fragment key={index}> 
 
             <h4 className="title-filter-styles mt-4">{title}</h4>
             <hr></hr> 
@@ -19,7 +19,7 @@ export default function ListOfFilters({ filters }){
                     values.map((array, index) => {
 
                         var cleaningData = array.replace(" ", "");
-                        cleaningData = cleaningData.replace("á","a");
+                        cleaningData = cleaningData.replace("á","a"); 
                         cleaningData = cleaningData.replace("é","e");
                         var inputId = cleaningData;
 

@@ -18,7 +18,6 @@ Footer
 .grid-footer-list{
     padding-left: 40px;
     padding-right: 40px;
-
     margin-right: 0.5rem;
     margin-left: 0.5rem;
 }
@@ -58,7 +57,6 @@ Footer
     height: 17.78px;
     width: 22.36px;
     color: var(--gray-light);
-
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -67,7 +65,39 @@ Footer
     height: 15.8px;
     width: 22.33px;
     color: var(--gray-light);
-
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/* Movil */ 
+
+@media screen and (max-width: 990px) {
+
+    .grid-footer-list{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 592px) {
+
+    .grid-footer-styles{
+        padding: 2rem 0rem 2rem 0rem;
+    }
+
+    .grid-footer-list{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .movil-list-margin{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .links-footer-styles {
+        font-size: 11px;
+    }
+    
 }

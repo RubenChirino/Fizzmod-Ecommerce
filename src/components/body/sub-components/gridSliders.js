@@ -3,9 +3,9 @@ import Sliders from "./sliders";
 
 export default function GridSliders(){
 
-   return(
+   return( 
 
-   <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
         
         <div className="carousel-inner">
             <Sliders />
