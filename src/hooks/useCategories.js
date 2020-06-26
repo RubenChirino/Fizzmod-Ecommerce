@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import getCategories from "../services/getCategories";
 
-
 export default function useCategories(){ 
  
     const [loadingCategories, setLoadingCategories] = useState(false);

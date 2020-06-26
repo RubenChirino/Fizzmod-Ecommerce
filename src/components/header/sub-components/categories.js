@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import useCategories from "../../../hooks/useCategories";
 import { Link } from "react-router-dom";
 
-export default function Categories(){
+export default function Categories(){ 
 
     const { categories } = useCategories(); 
 

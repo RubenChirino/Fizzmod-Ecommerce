@@ -12,26 +12,19 @@ export default function ListOfProducts({ products }){
         products.map((array) => {
 
             var notShow = "";
-            var res = 0;
+            var discount = 0;
 
             if(array.price.listPrice > array.price.sellingPrice){
-                res = ProductDiscount(array.price.listPrice, array.price.sellingPrice);
+                discount = ProductDiscount(array.price.listPrice, array.price.sellingPrice);
             }else{
                 notShow = "invisible";
-            }
-
-            var rebaje = <div className={`discount-style ${notShow}`}>
-                        <div className="text-center circle-text">
-                            {`-${res}%`}
-                        </div>
-                    </div>;
+            }    
 
           return(
-            <Product key={array.id} rebaje={rebaje} href={array.href} 
+            <Product key={array.id} discount={discount} href={array.href} 
             image={array.image} title={array.title} pricebefore={array.price.listPrice} 
-            pricenow={array.price.sellingPrice} notshow={notShow} />
-          );
-            
+            pricenow={array.price.sellingPrice} notshow={notShow} /> 
+          ); 
 
         })
         }
@@ -41,4 +34,3 @@ export default function ListOfProducts({ products }){
     );
 
 }
-

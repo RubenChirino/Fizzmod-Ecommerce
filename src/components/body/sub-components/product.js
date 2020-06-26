@@ -1,15 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+import Rebaje from "./rebaje";
 
-export default function Product({ rebaje, href, image, title, pricebefore, pricenow, notshow }){ 
+export default function Product({ discount, href, image, title, pricebefore, pricenow, notshow }){ 
 
     return(
         <div className="col-6 col-md-4 col-lg-3 card products-card-styles"> 
 
             <Link to={href}>
-                <div className="card-header">   
-                    {rebaje}
-                </div>
+               <Rebaje discount={discount} notshow={notshow} />
 
                 <img className="card-img-top" src={process.env.PUBLIC_URL + `/images/products/${image}`}
                 alt={title} />
@@ -24,3 +23,11 @@ export default function Product({ rebaje, href, image, title, pricebefore, price
     )
 
 }
+
+/*
+
+ <div className="card-header">   
+                    {rebaje}
+                </div>
+
+*/
