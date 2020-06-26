@@ -57,6 +57,11 @@ Header
     font-size: 22px;
 }
 
+.form-control:focus{
+    border-top: solid 1px var(--gray);
+    box-shadow: none;
+}
+
 /* Button (Mi Carrito) */
 
 .button-styles{

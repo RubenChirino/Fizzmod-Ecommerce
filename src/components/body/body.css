@@ -59,6 +59,7 @@ Body
 input[type=checkbox] {
 	display:none; 
 }
+
 input[type=checkbox] + label {
 	cursor: pointer;
 }

@@ -18,10 +18,8 @@ export default function ListOfFilters({ filters }){
                 {
                     values.map((array, index) => {
 
-                        var cleaningData = array.replace(" ", "");
-                        cleaningData = cleaningData.replace("á","a"); 
-                        cleaningData = cleaningData.replace("é","e");
-                        var inputId = cleaningData;
+                        var cleaningData = array.replace(" ", "");   
+                        var inputId = cleaningData.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
                         return(
                         <li key={index} className="list-group-item mt-1 mb-1">
