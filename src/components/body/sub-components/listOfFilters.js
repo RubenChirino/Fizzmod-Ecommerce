@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Filter from "./filter";
 
 export default function ListOfFilters({ filters }){
 
@@ -16,16 +17,13 @@ export default function ListOfFilters({ filters }){
 
             <ul className="list-group">
                 {
-                    values.map((array, index) => {
+                    values.map((array, index) => { 
 
                         var cleaningData = array.replace(" ", "");   
                         var inputId = cleaningData.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
                         return(
-                        <li key={index} className="list-group-item mt-1 mb-1">
-                            <input type="checkbox" className="form-check-input" id={inputId} />
-                            <label className="form-check-label list-text-filter" htmlFor={inputId}>{array}</label>
-                        </li>
+                            <Filter key={index} id={inputId} title={array} />
                         )                               
 
                     })

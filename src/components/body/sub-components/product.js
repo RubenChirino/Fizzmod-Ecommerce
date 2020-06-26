@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Product({ rebaje, href, image, title, pricebefore, pricenow, notshow }){
+export default function Product({ rebaje, href, image, title, pricebefore, pricenow, notshow }){ 
 
     return(
         <div className="col-6 col-md-4 col-lg-3 card products-card-styles"> 
