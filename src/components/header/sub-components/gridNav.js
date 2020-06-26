@@ -1,9 +1,9 @@
 import React from "react";
-import TopNav from "./topnav";
+import TopNav from "./topnav"; 
 import Search from "./search";
 import QuickCart from "./quickCart";
 
-export default function GridSection(){
+export default function GridNav(){
 
     return(
 
