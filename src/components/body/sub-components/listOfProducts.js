@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./product";
+import ProductDiscount from "../../../helpers/productDiscount";
 
 export default function ListOfProducts({ products }){ 
 
@@ -14,14 +15,7 @@ export default function ListOfProducts({ products }){
             var res = 0;
 
             if(array.price.listPrice > array.price.sellingPrice){
-
-                //Calc discount
-                var porcent = array.price.listPrice - array.price.sellingPrice;
-                porcent = porcent / array.price.listPrice;
-                var round = porcent.toString();
-                round = round.substring(0,4);
-                res = parseFloat(round) * 100;
-
+                res = ProductDiscount(array.price.listPrice, array.price.sellingPrice);
             }else{
                 notShow = "invisible";
             }
