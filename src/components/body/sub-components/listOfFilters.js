@@ -7,7 +7,7 @@ export default function ListOfFilters({ filters }){
         <div className="col-12 col-sm-3 col-md-2 col-lg-2 margin-filter"> 
 
         {
-           filters.map(({ title, field, values }, index) => 
+           filters.map(({ title, field, values }, index) =>  
             
            <Fragment key={index}> 
 
