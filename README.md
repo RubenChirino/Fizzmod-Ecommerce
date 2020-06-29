@@ -14,6 +14,8 @@ Made by Ruben Chirino.
 - API Called
 - NotFound Page(no styles)
 
+![](public/images/test/screenshot.png)
+
 ## To use this application use the following commands
 
 In the project directory, you can run:
