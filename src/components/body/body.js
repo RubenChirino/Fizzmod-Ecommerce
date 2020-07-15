@@ -5,7 +5,7 @@ import GridProducts from "./sub-components/gridProducts";
 
 export default function Body(){
 
-    return(
+    return( 
         <Fragment>
 
             <GridSliders />  

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Filter from "./filter";
 
-export default function ListOfFilters({ filters }){
+export default function ListOfFilters({ filters, captureFilters }){
 
     return(
 
@@ -23,7 +23,8 @@ export default function ListOfFilters({ filters }){
                         var inputId = cleaningData.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
                         return(
-                            <Filter key={index} id={inputId} title={array} />
+                            <Filter captureFilters={captureFilters} key={index} 
+                            field={field} id={inputId} title={array} />
                         )                               
 
                     })
