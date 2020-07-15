@@ -1,4 +1,4 @@
-# Fizzmod-Ecommerce (Fizzmod-Test) 💚
+# Fizzmod-Ecommerce 💚
 
 Fizzmod-Ecommerce is an application made with React.js, It is the home page of an Ecommerce and it has three main sections, Header, Body and Footer. 
 Made by Ruben Chirino.
@@ -13,6 +13,8 @@ Made by Ruben Chirino.
 - Custom Hook
 - API Called
 - NotFound Page(no styles)
+
+![](public/images/test/screenshot.png)
 
 ## To use this application use the following commands
 
